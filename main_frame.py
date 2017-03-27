@@ -1,42 +1,25 @@
 import random
+
 import chars
+print("Sending souls through the rift... done!")
 import weapons
+print("Importing weapons... done!")
+import locations
+print("Painting stunning vistas... done!")
 import battle_engine
-
-# What kind of game?
-
-# A detective game with an inventory system
-
-# Aram on the hunt for Shio, in the Lower Districts
+print("Listening for screams in agony... done!")
 
 aram = chars.Aram()
 
-francis = chars.Francis()
-
-podrey = chars.Podrey()
-
 tar_30 = chars.TAR_30()
 
-gun = weapons.Firearm(4, 6, 6)
+francis = chars.Francis()
 
-laser = weapons.CuttingLaser()
+crossing_paths = battle_engine.Battle()
 
-tar_30.weapon = laser
+crossing_paths.battle(aram, tar_30)
 
-aram.weapon = gun
 
-francis.weapon = laser
-
-battle_engine = battle_engine.BattleEngine()
-
-battle_engine.battle(aram, francis)
-
-if aram.alive:
-
-	print("Proceed to next battle?")
-	next_battle = input("> ")
 	
-	if next_battle == "yes":
-		battle(aram, tar_30)
-	else:
-		print("Farewell.")
+for i in range(100):
+	recording(aram, tar_30, 100)
