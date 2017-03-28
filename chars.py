@@ -1,5 +1,3 @@
-
-
 class Character(object):
 	
 	alive = True
