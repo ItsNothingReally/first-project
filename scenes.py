@@ -35,7 +35,9 @@ class TheIsland(Scene):
 	"""
 	
 	mid_battle = """
-	
+	Tables are flipped and guests are fleeing the scene, hands held over their
+	heads. From time to time, the owner of The Island can be seen peeking out 
+	from behind the counter, only to swear and duck down again.
 	"""
 	
 class TheFactory(Scene):
