@@ -10,10 +10,6 @@ import battle_engine
 
 # Aram on the hunt for Shio, in the Lower Districts
 
-gun = weapons.Firearm(4, 6, 6)
-
-laser = weapons.CuttingLaser()
-
 battle_engine = battle_engine.BattleEngine()
 
 main_char, npc_pool = chars.choose_char()		

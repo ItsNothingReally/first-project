@@ -24,12 +24,11 @@ class Aram(Character):
 		self.inventory = []
 	
 	description = """
-	A Protector from the Horizon wearing the typical emerald 
-	uniform. His eyes seem to be constantly scanning his 
-	surroundings and his expression leaves little room for 
-	any interpretation of his mood.
+	A Protector from the Horizon wearing the typical emerald uniform. His eyes 
+	seem to be constantly scanning his surroundings and his expression leaves 
+	little room for any interpretation of his mood.
 	"""
-	weapon = weapons.Firearm(3, 6, 6)
+	weapon = weapons.Pistol()
 	
 	animal = "Tabito"
 	
@@ -44,13 +43,14 @@ class Francis(Character):
 		self.inventory = []
 	
 	description = """
-	Sitting at a table in the corner fiddling around with
-	something in his hands. He seems to be uneasy around 
-	large groups of people. Dressed in a black jacket 
-	patched up in multiple locations using slogans such 
+	Sitting at a table in the corner fiddling around with something in his 
+	hands. He seems to be uneasy around large groups of people. Dressed 
+	in a black jacket patched up in multiple locations using slogans such 
 	as 'Shine On' and 'We Belong Together'.
 	""" 
 
+	weapon = weapons.Pistol()
+	
 class Podrey(Character):
 
 	def __init__(self):
@@ -62,10 +62,9 @@ class Podrey(Character):
 		self.inventory = []
 	
 	description = """
-	Constantly fiddling around with something in his hands,
-	seems to be uneasy around large groups of people.
-	Dressed in a black jacket patched up in multiple locations
-	using slogans such as 'Shine On' and 'We Belong Together'.
+	Constantly fiddling around with something in his hands, seems to be uneasy 
+	around large groups of people. Dressed in a black jacket patched up in 
+	multiple locations using slogans such as 'Shine On' and 'We Belong Together'.
 	"""  
 	
 class TAR_30(Character):
@@ -79,10 +78,10 @@ class TAR_30(Character):
 		self.inventory = []
 	
 		self.description = """
-	A shining black orb floating a little over a meter in the air
-	using an advanced propulsion system. Usually, but not
-	always accompanied by a Company engineer. Able to give out
-	commands to humans and feedback to other orbs.
+	A shining black orb floating a little over a meter in the air using an 
+	advanced propulsion system. Usually, but not always accompanied by a 
+	Company engineer. Able to give out commands to humans and feedback to 
+	other orbs.
 	""" 
 		
 	weapon = weapons.CuttingLaser()
@@ -97,7 +96,7 @@ def choose_char():
 	}
 
 	print("Choose your character:")
-	print("1. Aram\t2. Francis\t3. TAR-30\t4. Podrey")
+	print("1. Aram\t\t2. Francis\t3. TAR-30\t4. Podrey")
 
 	choice = input("> ")
 
