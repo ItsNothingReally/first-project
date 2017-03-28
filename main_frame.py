@@ -1,4 +1,5 @@
 import random
+import scenes
 import chars
 import weapons
 import battle_engine
@@ -9,34 +10,25 @@ import battle_engine
 
 # Aram on the hunt for Shio, in the Lower Districts
 
-aram = chars.Aram()
-
-francis = chars.Francis()
-
-podrey = chars.Podrey()
-
-tar_30 = chars.TAR_30()
-
 gun = weapons.Firearm(4, 6, 6)
 
 laser = weapons.CuttingLaser()
 
-tar_30.weapon = laser
-
-aram.weapon = gun
-
-francis.weapon = laser
-
 battle_engine = battle_engine.BattleEngine()
 
-battle_engine.battle(aram, francis)
+main_char, npc_pool = chars.choose_char()		
 
-if aram.alive:
 
-	print("Proceed to next battle?")
-	next_battle = input("> ")
+
+
+while main_char.alive:
+
+	choice = input("> ")
 	
-	if next_battle == "yes":
-		battle(aram, tar_30)
-	else:
-		print("Farewell.")
+	if 'fight' in choice:
+		for char in npc_pool:
+			if char in choice:
+				enemy = npc_pool[char]
+				battle_engine.battle(main_char, enemy)
+		
+

@@ -1,3 +1,6 @@
+import weapons
+
+
 class Character(object):
 	
 	alive = True
@@ -26,8 +29,7 @@ class Aram(Character):
 	surroundings and his expression leaves little room for 
 	any interpretation of his mood.
 	"""
-	
-	playable = True
+	weapon = weapons.Firearm(3, 6, 6)
 	
 	animal = "Tabito"
 	
@@ -78,7 +80,35 @@ class TAR_30(Character):
 	
 		self.description = """
 	A shining black orb floating a little over a meter in the air
-	using advanced an advanced propulsion system. Usually, but not
+	using an advanced propulsion system. Usually, but not
 	always accompanied by a Company engineer. Able to give out
 	commands to humans and feedback to other orbs.
-	"""  
+	""" 
+		
+	weapon = weapons.CuttingLaser()
+	
+def choose_char():
+
+	character_pool = {
+		'aram': Aram(),
+		'francis': Francis(),
+		'tar-30': TAR_30(),
+		'podrey': Podrey()
+	}
+
+	print("Choose your character:")
+	print("1. Aram\t2. Francis\t3. TAR-30\t4. Podrey")
+
+	choice = input("> ")
+
+	main_char = character_pool[choice.lower()]
+
+	main_char.playable = True
+	
+	npc_pool = {}
+	
+	for char in character_pool:
+		if not character_pool[char].playable:
+			npc_pool[char] = character_pool[char]
+		
+	return main_char, npc_pool
