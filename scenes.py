@@ -13,10 +13,35 @@ class Fountain(Scene):
 class TheIsland(Scene):
 	
 	description = """
-	The Island is a place where people from all walks of life gather 
+	The Island is a dimly lit bar where people from all walks of life gather to
+	seek refuge from the dreading outside world. The owner is widely respected
+	for not discriminating between his customers.
+	
+	Staff is busy delivering drinks and food, rushing past tables packed with
+	people. On tables here 
+	
+	Doors leading to the depths of the Island next to the counter are accessible
+	only to a select few, and guests regularly joke about the kingdom that lies
+	under their feet.
+	
+	Dancers perform on the stage in the middle of The Island, twisting their 
+	bodies like snakes.  The music they are dancing to has taken over every 
+	corner of the bar and most guests have given up trying to have a 
+	conversation. Instead, they are watching the dancers shake and twirl as
+	if they were possessed.
+	
+	Aram and Francis are sitting at a table, taking turns to take a hit from
+	the steaming tower set up between them.	
+	"""
+	
+	mid_battle = """
 	
 	"""
 	
 class TheFactory(Scene):
 
-	pass
+	description = """
+	A white world filled with conveyor belts and machinery operating like 
+	clockwork. Here and there arms are attached to torsos, other places birth
+	outlandish contraptions that look more like 
+	"""

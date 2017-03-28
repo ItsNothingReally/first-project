@@ -26,5 +26,6 @@ while main_char.alive:
 			if char in choice:
 				enemy = npc_pool[char]
 				battle_engine.battle(main_char, enemy)
-		
+	elif 'look around' in choice:
+		print(main_char.current_location.description)
 

@@ -1,5 +1,5 @@
 import weapons
-
+import scenes
 
 class Character(object):
 	
@@ -29,6 +29,8 @@ class Aram(Character):
 	little room for any interpretation of his mood.
 	"""
 	weapon = weapons.Pistol()
+	
+	current_location = scenes.TheIsland()
 	
 	animal = "Tabito"
 	
