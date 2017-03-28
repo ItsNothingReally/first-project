@@ -54,7 +54,7 @@ class BattleEngine(object):
 		while charA.alive and charB.alive:
 	
 			# first to go
-			if charA.current_HP <= charA.max_HP / 2 or charB.current_HP <= charB.max_HP / 2:
+			if charA.current_HP <= charA.max_HP / 2 and charB.current_HP <= charB.max_HP / 2:
 				print(current_location.mid_battle)
 		
 			print("%s's turn." % first_to_go.name)
