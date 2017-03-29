@@ -20,9 +20,11 @@ main_char.current_location = main_char.starting_location
 main_char.inventory['potion'] = items.HealingPotion()
 main_char.inventory['present'] = items.HealingPotion()
 
+
+print("You are currently at %s.\n" % main_char.current_location.name)
+
 while main_char.alive:
 
-	print("You are currently in %s.\n" % main_char.current_location.name)
 	print("Choose your next action:\n")
 
 	choice = input("> ")

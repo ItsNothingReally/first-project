@@ -31,8 +31,6 @@ class Aram(Character):
 	"""
 	weapon = weapons.Pistol()
 	
-	
-	
 	animal = "Tabito"
 	
 class Francis(Character):
@@ -43,7 +41,7 @@ class Francis(Character):
 		self.max_HP = 20
 		self.current_HP = 20
 		self.speed = 35
-		self.inventory = []
+		self.inventory = {}
 		self.starting_location = scenes.TheIsland()
 		self.description = """
 		Sitting at a table in the corner fiddling around with something in his 
@@ -63,7 +61,7 @@ class Podrey(Character):
 		self.max_HP = 30
 		self.current_HP = 30
 		self.speed = 24
-		self.inventory = []
+		self.inventory = {}
 		self.starting_location = scenes.Fountain()
 		self.description = """
 		Constantly fiddling around with something in his hands, seems to be uneasy 
@@ -79,8 +77,8 @@ class TAR_30(Character):
 		self.max_HP = 20
 		self.current_HP = 20
 		self.speed = 42
-		self.inventory = []
-		self.starting_location = scenes.Fountain()
+		self.inventory = {}
+		self.starting_location = scenes.TheFactory()
 		self.description = """
 	A shining black orb floating a little over a meter in the air using an 
 	advanced propulsion system. Usually, but not always accompanied by a 

@@ -2,7 +2,6 @@ missing module named resource - imported by posix, C:\Users\H.Yumitani\Documents
 missing module named posix - imported by os, C:\Users\H.Yumitani\Documents\GitHub\first-project\main_frame.py
 missing module named _posixsubprocess - imported by subprocess, C:\Users\H.Yumitani\Documents\GitHub\first-project\main_frame.py
 missing module named 'org.python' - imported by pickle, C:\Users\H.Yumitani\Documents\GitHub\first-project\main_frame.py, xml.sax
-missing module named ce - imported by os, C:\Users\H.Yumitani\Documents\GitHub\first-project\main_frame.py
 missing module named readline - imported by cmd, code, pdb, C:\Users\H.Yumitani\Documents\GitHub\first-project\main_frame.py
 excluded module named _frozen_importlib - imported by importlib, importlib.abc, C:\Users\H.Yumitani\Documents\GitHub\first-project\main_frame.py
 missing module named _frozen_importlib_external - imported by importlib._bootstrap, importlib, importlib.abc, C:\Users\H.Yumitani\Documents\GitHub\first-project\main_frame.py
@@ -13,6 +12,7 @@ missing module named 'java.lang' - imported by platform, C:\Users\H.Yumitani\Doc
 missing module named vms_lib - imported by platform, C:\Users\H.Yumitani\Documents\GitHub\first-project\main_frame.py
 missing module named termios - imported by tty, C:\Users\H.Yumitani\Documents\GitHub\first-project\main_frame.py, getpass
 missing module named grp - imported by tarfile, shutil, C:\Users\H.Yumitani\Documents\GitHub\first-project\main_frame.py
-missing module named _dummy_threading - imported by dummy_threading, C:\Users\H.Yumitani\Documents\GitHub\first-project\main_frame.py
 missing module named org - imported by copy, C:\Users\H.Yumitani\Documents\GitHub\first-project\main_frame.py
 missing module named pwd - imported by posixpath, tarfile, shutil, http.server, webbrowser, C:\Users\H.Yumitani\Documents\GitHub\first-project\main_frame.py, netrc, getpass
+missing module named ce - imported by os, C:\Users\H.Yumitani\Documents\GitHub\first-project\main_frame.py
+missing module named _dummy_threading - imported by dummy_threading, C:\Users\H.Yumitani\Documents\GitHub\first-project\main_frame.py

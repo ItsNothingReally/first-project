@@ -8,7 +8,11 @@ class Scene(object):
 
 class Fountain(Scene):
 
-	pass
+	name = "The Fountain"
+	
+	description: """
+	
+	"""
 	
 class TheIsland(Scene):
 	
@@ -44,8 +48,11 @@ class TheIsland(Scene):
 	
 class TheFactory(Scene):
 
+	name = "The Factory"
+
 	description = """
 	A white world filled with conveyor belts and machinery operating like 
 	clockwork. Here and there arms are attached to torsos, other places birth
-	outlandish contraptions that look more like 
+	outlandish contraptions that look more like huge molecules. After every
+	step, one more part of them starts moving, until they eventually finish themselves.
 	"""
