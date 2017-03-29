@@ -21,7 +21,8 @@ class Aram(Character):
 		self.max_HP = 30
 		self.current_HP = 30
 		self.speed = 31
-		self.inventory = []
+		self.inventory = {}
+		self.starting_location = scenes.TheIsland()
 	
 	description = """
 	A Protector from the Horizon wearing the typical emerald uniform. His eyes 
@@ -30,7 +31,7 @@ class Aram(Character):
 	"""
 	weapon = weapons.Pistol()
 	
-	current_location = scenes.TheIsland()
+	
 	
 	animal = "Tabito"
 	
@@ -43,13 +44,14 @@ class Francis(Character):
 		self.current_HP = 20
 		self.speed = 35
 		self.inventory = []
+		self.starting_location = scenes.TheIsland()
+		self.description = """
+		Sitting at a table in the corner fiddling around with something in his 
+		hands. He seems to be uneasy around large groups of people. Dressed 
+		in a black jacket patched up in multiple locations using slogans such 
+		as 'Shine On' and 'We Belong Together'.
+		""" 
 	
-	description = """
-	Sitting at a table in the corner fiddling around with something in his 
-	hands. He seems to be uneasy around large groups of people. Dressed 
-	in a black jacket patched up in multiple locations using slogans such 
-	as 'Shine On' and 'We Belong Together'.
-	""" 
 
 	weapon = weapons.Pistol()
 	
@@ -62,12 +64,12 @@ class Podrey(Character):
 		self.current_HP = 30
 		self.speed = 24
 		self.inventory = []
-	
-	description = """
-	Constantly fiddling around with something in his hands, seems to be uneasy 
-	around large groups of people. Dressed in a black jacket patched up in 
-	multiple locations using slogans such as 'Shine On' and 'We Belong Together'.
-	"""  
+		self.starting_location = scenes.Fountain()
+		self.description = """
+		Constantly fiddling around with something in his hands, seems to be uneasy 
+		around large groups of people. Dressed in a black jacket patched up in 
+		multiple locations using slogans such as 'Shine On' and 'We Belong Together'.
+		"""  
 	
 class TAR_30(Character):
 
@@ -78,7 +80,7 @@ class TAR_30(Character):
 		self.current_HP = 20
 		self.speed = 42
 		self.inventory = []
-	
+		self.starting_location = scenes.Fountain()
 		self.description = """
 	A shining black orb floating a little over a meter in the air using an 
 	advanced propulsion system. Usually, but not always accompanied by a 

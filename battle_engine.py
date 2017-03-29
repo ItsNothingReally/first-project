@@ -1,4 +1,5 @@
 import random
+import items
 
 class BattleEngine(object):
 
@@ -22,13 +23,23 @@ class BattleEngine(object):
 				else:
 					charA.weapon.shoot(charB)
 					action_point -= 1
+					
 			elif choice == "defend":
 				print("%s takes a defensive stance." % charA.name)
 				charA.temporary_armor += 2
 				print("%s's defense is now %d.\n" % (charA.name, charA.temporary_armor))
 				action_point -= 1
+				
 			elif choice == "item":
-				print("%s's inventory:" % charA.name)
+				items.print_inventory(charA)
+				print("Which item do you want to use?")
+				choice = input("> ")
+				for item in charA.inventory:
+					if choice.title() == charA.inventory[item].name:
+						charA.inventory[item].use(charA)
+						del charA.inventory[item]
+						break
+				
 			elif choice == "run":
 				print("%s flees from the battle." % charA.name)
 				action_point -= 1

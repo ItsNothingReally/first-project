@@ -12,13 +12,15 @@ class Fountain(Scene):
 	
 class TheIsland(Scene):
 	
+	name = "The Island"
+	
 	description = """
 	The Island is a dimly lit bar where people from all walks of life gather to
 	seek refuge from the dreading outside world. The owner is widely respected
 	for not discriminating between his customers.
 	
 	Staff is busy delivering drinks and food, rushing past tables packed with
-	people. On tables here 
+	people. Tables here and there hold empty glasses and plates.
 	
 	Doors leading to the depths of the Island next to the counter are accessible
 	only to a select few, and guests regularly joke about the kingdom that lies
