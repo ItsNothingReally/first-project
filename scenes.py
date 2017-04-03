@@ -10,8 +10,8 @@ class Fountain(Scene):
 
 	name = "The Fountain"
 	
-	description: """
-	
+	description = """
+	A fountain.
 	"""
 	
 class TheIsland(Scene):
@@ -24,7 +24,7 @@ class TheIsland(Scene):
 	for not discriminating between his customers.
 	
 	Staff is busy delivering drinks and food, rushing past tables packed with
-	people. Tables here and there hold empty glasses and plates.
+	customers. Tables here and there hold empty glasses and plates.
 	
 	Doors leading to the depths of the Island next to the counter are accessible
 	only to a select few, and guests regularly joke about the kingdom that lies
