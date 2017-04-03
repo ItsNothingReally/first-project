@@ -23,26 +23,29 @@ main_char.inventory['present'] = items.HealingPotion()
 
 print("You are currently at %s.\n" % main_char.current_location.name)
 
-while main_char.alive:
+def free_movement(character, npcs, location):
 
-	print("Choose your next action:\n")
+	while character.alive:
 
-	choice = input("> ")
+		print("Choose your next action:\n")
+
+		choice = input("> ")
 	
-	if 'fight' in choice:
-		for char in npc_pool:
-			if char in choice:
-				enemy = npc_pool[char]
-				battle_engine.battle(main_char, enemy, main_char.current_location)
+		if 'fight' in choice:
+			for char in npcs:
+				if char in choice:
+					enemy = npcs[char]
+					battle_engine.battle(character, enemy, character.current_location)
 				
-	elif 'look around' in choice:
-		print(main_char.current_location.description)
+		elif 'look around' in choice:
+			print(character.current_location.description)
 		
-	elif 'look at' in choice:
-		for npc in npc_pool:
-			if npc_pool[npc].name in choice.title():
-				print(npc_pool[npc].description)
+		elif 'look at' in choice:
+			for npc in npcs:
+				if npcs[npc].name in choice.title():
+					print(npcs[npc].description)
 				
-	elif 'inventory' in choice:
-		items.print_inventory(main_char)
+		elif 'inventory' in choice:
+			items.print_inventory(character)
 
+free_movement(main_char, npc_pool, main_char.current_location)
