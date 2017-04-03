@@ -1,5 +1,6 @@
 import random
 import items
+import scenes
 
 class BattleEngine(object):
 
@@ -60,6 +61,8 @@ class BattleEngine(object):
 
 		print("%s goes first." % first_to_go.name)
 	
+		turn_count = 0
+		
 		# battle turn rotation
 	
 		while charA.alive and charB.alive:
@@ -67,8 +70,12 @@ class BattleEngine(object):
 			# first to go
 			if charA.current_HP <= charA.max_HP / 2 and charB.current_HP <= charB.max_HP / 2:
 				print(current_location.mid_battle)
+			elif turn_count == 5:
+				if hasattr(current_location, 'mid_battle'):
+					print(current_location.mid_battle)
+			
 		
-			print("%s's turn." % first_to_go.name)
+			print("%s's turn.\n" % first_to_go.name)
 		
 			self.turn(first_to_go, second_to_go)
 			
@@ -79,10 +86,12 @@ class BattleEngine(object):
 				print("%s's turn." % second_to_go.name)
 		
 				self.turn(second_to_go, first_to_go)
+				
+			turn_count += 1
 
 	def automated(self):
 		choices = ["attack", "defend"]
 		return choices[random.randint(0, len(choices) - 1)]
 	
 	def HP_display(self, char):
-		return "■" * char.current_HP + "□" * (char.max_HP - char.current_HP)
+		return "■" * char.current_HP + "□" * (char.max_HP - char.current_HP) + "\n"
