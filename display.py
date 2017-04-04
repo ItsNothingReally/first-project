@@ -1,10 +1,6 @@
 import pygame
-import chars
-import items
 import main_frame
 import scenes
-import weapons
-import battle_engine
 
 pygame.init()
 
@@ -20,12 +16,12 @@ pygame.display.set_caption('Encounter at The Island')
 clock = pygame.time.Clock()
 
 text_box = pygame.image.load('Assets/text_box.png')
+
 mouse_img = pygame.image.load('Assets/mouse_cursor.png')
 mouse_height = 25
 mouse_width = 15
 
 text_font = pygame.font.Font('freesansbold.ttf', 12)
-text = text_font.render(main_frame.first_message, True, white)
 
 def mouse(x, y):
 	gameDisplay.blit(mouse_img, (x,y))
@@ -33,12 +29,18 @@ def mouse(x, y):
 def message_display(text):
 	pass
 
+def welcome(scene):
+	font = pygame.font.Font('freesansbold.ttf', 12)
+	welcome_text = "You are currently at %s." % scene.name
+	text = font.render(welcome_text, True, (255, 255, 255))
+	gameDisplay.blit(text, (55, 305))
+	
 def show_scene(scene):
 
 		gameDisplay.fill(white)
 		gameDisplay.blit(scene.background_img, (0,0))
 		gameDisplay.blit(text_box, (50, 300))
-		gameDisplay.blit(scene.welcome(), (55, 305))
+		welcome(scene)
 	
 def game_loop():	
 		
@@ -52,7 +54,7 @@ def game_loop():
 
 	while not gameExit:
 		
-		show_scene(main_frame.main_char.current_location)
+		show_scene(scenes.TheIsland())
 
 		for event in pygame.event.get():
 			print(event)

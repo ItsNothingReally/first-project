@@ -1,11 +1,11 @@
-import random
+import pygame
 
 # locations class file
 
 class Scene(object):
 
-	pass
-
+	name = None
+		
 class Fountain(Scene):
 
 	name = "The Fountain"
@@ -17,6 +17,8 @@ class Fountain(Scene):
 class TheIsland(Scene):
 	
 	name = "The Island"
+	
+	background_img = pygame.image.load('Assets/cozy_bar.jpg')
 	
 	description = """
 		The Island is a dimly lit bar where people from all walks of\n

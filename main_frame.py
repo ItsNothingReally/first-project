@@ -1,9 +1,6 @@
-import random
-import scenes
-import chars
-import weapons
-import items
 import battle_engine
+import chars
+import items
 
 # What kind of game?
 
@@ -13,15 +10,12 @@ import battle_engine
 
 battle_engine = battle_engine.BattleEngine()
 
-main_char, npc_pool = chars.choose_char()		
+main_char = chars.Aram()
 
 main_char.current_location = main_char.starting_location
 
 main_char.inventory['potion'] = items.HealingPotion()
 main_char.inventory['present'] = items.HealingPotion()
-
-
-first_message = "You are currently at %s." % main_char.current_location.name
 
 def free_movement(character, npcs, location):
 
