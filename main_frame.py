@@ -21,7 +21,7 @@ main_char.inventory['potion'] = items.HealingPotion()
 main_char.inventory['present'] = items.HealingPotion()
 
 
-print("You are currently at %s.\n" % main_char.current_location.name)
+first_message = "You are currently at %s." % main_char.current_location.name
 
 def free_movement(character, npcs, location):
 
