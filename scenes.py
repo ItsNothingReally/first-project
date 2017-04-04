@@ -10,6 +10,8 @@ class Fountain(Scene):
 
 	name = "The Fountain"
 	
+	background_img = pygame.image.load('Assets/fountain.jpg')
+	
 	description = """
 	A fountain.
 	"""

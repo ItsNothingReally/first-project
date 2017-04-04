@@ -54,7 +54,7 @@ def game_loop():
 
 	while not gameExit:
 		
-		show_scene(scenes.TheIsland())
+		show_scene(scenes.Fountain())
 
 		for event in pygame.event.get():
 			print(event)
