@@ -19,7 +19,7 @@ class TheIsland(Scene):
 	name = "The Island"
 	
 	description = """
-		The Island is a dimly lit bar where people from all walks of
+		The Island is a dimly lit bar where people from all walks of\n
 		life gather to seek refuge from the dreading outside world. The
 		owner is widely respected for not discriminating between his customers.
 	

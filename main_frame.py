@@ -48,4 +48,4 @@ def free_movement(character, npcs, location):
 		elif 'inventory' in choice:
 			items.print_inventory(character)
 
-free_movement(main_char, npc_pool, main_char.current_location)
+#free_movement(main_char, npc_pool, main_char.current_location)
